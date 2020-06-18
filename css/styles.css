@@ -1,0 +1,246 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#background {
+  background-image: url('../images/background-image.png');
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.home {
+  height: 100%;
+}
+
+#logo {
+ height: 36px;
+ padding: 8px 16px 0 24px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 7vh;
+  color: #FAFFFF;
+  margin: 30vh 0 0 0;
+}
+
+.home-description {
+  font-family: 'Lora', serif;
+  font-size: 3.5vh;
+  color: #FAFFFF;
+  margin: 0;
+}
+
+.button_container {
+	position: absolute;
+  left: 0;
+  right: 0;
+  top: 30%;
+}
+
+.description, .link {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+.description {
+	font-size: 35px;
+}
+
+.btn {
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #FAFFFF;
+  margin-top: 36px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  border-radius: 16px;
+  height: 40px;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+  color: #78c7d2;
+  padding: 8px 40px;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-75%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-6%) translateY(-25%) rotate(45deg);
+}
+
+.btn span:hover {
+  color: #FAFFFF;
+  transition: 1s;
+
+}
+
+.home > div:nth-child(3) {
+  padding-left: 0vw;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.header a {
+  color:#FAFFFF;
+  font-size: 2vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 16px 0 0 14px;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header #logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #FAFFFF;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #FAFFFF;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 28px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+  #logo {
+    padding: 24px 20px 10px 16vw;
+    height: 56px;
+  }
+
+  .home > div:nth-child(3) {
+    padding-left: 16vw;
+    padding-top: 24px;
+    text-align: justify;
+  }
+}
