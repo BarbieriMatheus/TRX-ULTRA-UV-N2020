@@ -2,6 +2,7 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -144,11 +145,12 @@ h1 {
   height: 40px;
 }
 
-.btn span {
+.btn a {
   position: relative;
   z-index: 1;
   color: #78c7d2;
   padding: 8px 40px;
+  text-decoration: none;
 }
 
 .btn:after {
@@ -170,7 +172,7 @@ h1 {
   transform: translateX(-6%) translateY(-25%) rotate(45deg);
 }
 
-.btn span:hover {
+.btn a:hover {
   color: #FAFFFF;
   transition: 1s;
 
@@ -228,7 +230,7 @@ h2 {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 3;
 }
@@ -515,4 +517,64 @@ hr {
   .content-security div:nth-of-type(2) {
     margin-left: 0;
   }
+}
+
+footer {
+  padding: 80px 36px;
+  background: #43BCCD;
+  text-align: center;
+}
+
+footer h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.6vh;
+  line-height: 42px;
+  color: #FAFFFF;
+  margin: 8px 0 48px 0 ;
+}
+
+footer img {
+  height: 14vh;
+}
+
+footer a {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  text-transform: none;
+}
+
+footer a:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.container-social-media {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  width: 246px;
+}
+
+.social-media img {
+  height: 6vh;
+  margin-right: 32px;
+  margin-left: 48px;
+}
+
+.social-media p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #F8FEFF;
 }
