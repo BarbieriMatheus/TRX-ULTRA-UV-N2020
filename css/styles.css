@@ -4,6 +4,15 @@ body, html {
   padding: 0;
 }
 
+p {
+  font-family: Lora;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  
+  color: #000000;
+}
+
 #background {
   background-image: url('../images/background-image.png');
   height: 100%;
@@ -48,10 +57,6 @@ body, html {
 
 .card img {
   width: 100%;
-}
-
-.card p {
-  margin: 0 10% 4vh 16%;
 }
 
 .home {
@@ -364,5 +369,150 @@ hr {
     padding-left: 16vw;
     padding-top: 24px;
     text-align: justify;
+  }
+}
+
+#toggle-image {
+  position:relative;
+  height: 250px;
+  width: 250px;
+  margin-top: 16px;
+}
+#toggle-image img {
+  position:absolute;
+  left:0;
+  height: 250px;
+}
+
+#security hr {
+  width: 15%;
+}
+
+.content-security {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content-security p {
+  position: relative;
+}
+
+.content-security div:nth-of-type(2) {
+  width: 50%;
+  min-width: 300px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 36px;
+  margin-top: 16px;
+}
+
+
+@-moz-keyframes imgFade {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+ }
+ 
+ @-o-keyframes imgFade {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+ }
+ 
+ @keyframes imgFade {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+ }
+
+ #toggle-image img {
+  -webkit-animation-name: imgFade;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+
+  -moz-animation-name: imgFade;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 8s;
+
+  -o-animation-name: imgFade;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 8s;
+
+  animation-name: imgFade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+
+#toggle-image img:nth-of-type(1) {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
+}
+#toggle-image img:nth-of-type(2) {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+#toggle-image img:nth-of-type(3) {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#toggle-image img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+@media (max-width: 657px) {
+  .content-security div:nth-of-type(2) {
+    margin-left: 0;
   }
 }
