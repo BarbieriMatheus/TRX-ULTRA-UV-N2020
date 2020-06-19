@@ -9,10 +9,49 @@ body, html {
   height: 100%;
   width: 100%;
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   z-index: -1;
+}
+
+.container-wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  width: 20%;
+  flex-wrap: wrap;
+  min-width: 250px;
+  margin-top: 16px;
+}
+
+.card:hover {
+  background: #F8FEFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.6vh;
+  line-height: 42px;
+  color: #43BCCD;
+  margin: 1.6vh;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  margin: 0 10% 4vh 16%;
 }
 
 .home {
@@ -36,6 +75,35 @@ h1 {
   font-size: 3.5vh;
   color: #FAFFFF;
   margin: 0;
+}
+
+.icon {
+  text-align: center;
+  width: 30%;
+  /* height: 300px; */
+  min-width: 250px;
+  border-bottom: 2px solid white;
+}
+
+.icon img {
+  height: 64px;
+  margin-top: 16px;
+}
+
+.icon h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5vh;
+  line-height: 28px;
+  color: #000000;
+}
+
+.icon div {
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button_container {
@@ -103,6 +171,45 @@ h1 {
 
 }
 
+h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4vh;
+  line-height: 42px;
+  color: #000000;
+  margin: 0 24px 0 24px;
+  text-align: center;
+}
+
+.container-main {
+  padding: 56px 36px;
+}
+
+.title-container {
+  justify-content: center;
+  margin-bottom: 4vh;
+}
+
+.title-description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin: 8px 0 0 0;
+  text-align: center;
+}
+
+.title-description span {
+  color: #43BCCD;
+}
+
+#beneficts .title-description span {
+  color: #F8FEFF;
+}
+
 .home > div:nth-child(3) {
   padding-left: 0vw;
   padding-top: 24px;
@@ -110,7 +217,7 @@ h1 {
 }
 
 .header a {
-  color:#FAFFFF;
+  color: #F8FEFF;
   font-size: 2vh;
   font-family: 'Roboto', sans-serif;
 }
@@ -215,7 +322,22 @@ h1 {
   top: 0;
 }
 
-/* 48em = 768px */
+hr {
+  width: 20%;
+  background-color: #43BCCD;
+  height: 8px;
+  border-radius: 25px;
+  margin-bottom: 16px;
+  border: none;
+}
+
+#beneficts hr {
+  background-color: #F8FEFF;
+}
+
+#beneficts {
+  background-color: #A7D9E0;
+}
 
 @media (min-width: 48em) {
   .header li {
